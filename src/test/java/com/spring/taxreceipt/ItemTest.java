@@ -43,8 +43,8 @@ public class ItemTest {
 			{ "imported bottle of perfume", 47.50f, ItemType.IMPORTED_OTHERS, 54.65f },
 			{ "imported bottle of perfume", 27.99f, ItemType.IMPORTED_OTHERS, 32.19f },
 			{ "bottle of perfume", 18.99f, ItemType.OTHERS, 20.89f },
-			{ "packet of headache pills", 9.75f, ItemType.MEDICAL, 9.75f },
-			{ "box of imported chocolates", 11.25f, ItemType.IMPORTED_FOOD, 11.85f } };
+			{ "packet of pills", 9.75f, ItemType.MEDICAL, 9.75f },
+			{ "imported box of chocolates", 11.25f, ItemType.IMPORTED_FOOD, 11.85f } };
 
 	private Item createItem(String description, float price, ItemType itemType) {
 		Item item = testContextManager.getTestContext().getApplicationContext().getBean(Item.class);
