@@ -10,10 +10,10 @@ import com.spring.taxreceipt.Types.ItemType;
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class Product implements Item{
-	protected float itemPrice;
+	private float itemPrice;
 	private String name;
 	private ItemType itemType;
-	
+	private int itemQuantity;
 	@Autowired
 	private TaxCalculator calculator;
 
@@ -55,7 +55,7 @@ public class Product implements Item{
 
 	@Override
 	public float getItemPriceWithTax() {
-		return getItemSaleTax() + getItemPrice();
+		return getItemSaleTax() + (getItemPrice() * getItemQuantity());
 	}
 
 	@Override
@@ -65,6 +65,18 @@ public class Product implements Item{
 
 	@Override
 	public String toString() {
-		return 1 + " " + name + " :" + getItemPriceWithTax();
+		return itemQuantity + " " + name + " :" + getItemPriceWithTax();
+	}
+
+	@Override
+	public void setItemQuantity(int quantity) {
+		itemQuantity= quantity;
+		
+	}
+
+	@Override
+	public int getItemQuantity() {
+		
+		return itemQuantity;
 	}
 }

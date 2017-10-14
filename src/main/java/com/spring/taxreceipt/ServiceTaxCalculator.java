@@ -9,7 +9,7 @@ public class ServiceTaxCalculator implements TaxCalculator{
 
 	private static final float ROUNDOFF=0.05f;
 	public float calculateTax(Item item) {
-		return roundOffTax(getItemTaxType(item).getApplicableTax() * item.getItemPrice());
+		return roundOffTax(getItemTaxType(item).getApplicableTax() * item.getItemPrice()*item.getItemQuantity());
 	}
 
 	private TaxType getItemTaxType(Item item) {

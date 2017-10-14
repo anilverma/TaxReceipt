@@ -40,31 +40,32 @@ public class CartTest {
 	   Object[][] data = new Object[][] {
 			   { createItemList(new Object[][]{ITEM_LIST[0], ITEM_LIST[1], ITEM_LIST[2]}), 29.83f , 1.50f},
 			   { createItemList(new Object[][]{ITEM_LIST[3], ITEM_LIST[4]}), 65.15f , 7.65f},
-			   { createItemList(new Object[][]{ITEM_LIST[5], ITEM_LIST[6], ITEM_LIST[7], ITEM_LIST[8]}), 74.68f , 6.70f} };
+			   { createItemList(new Object[][]{ITEM_LIST[5], ITEM_LIST[6], ITEM_LIST[7], ITEM_LIST[8]}), 84.43f , 6.70f} };
 	   return Arrays.asList(data);
 	 }
 	 private static List<Item> createItemList(Object[][] data){
 		 List<Item> list = new ArrayList<Item>();
 		 for(Object[] item: data){
-			 list.add(createItem((String)item[0],(Float)item[1], (ItemType)item[2]));
+			 list.add(createItem((String)item[0],(Float)item[1],(ItemType)item[2],(int)item[3]));
 		 }
 		 return list;
 	 }
 
-	public static Object[][] ITEM_LIST = new Object[][] { { "book", 12.49f, ItemType.BOOK, 12.49f },
-			{ "Music DVD", 14.99f, ItemType.OTHERS, 16.49f }, { "chocolate bar", 0.85f, ItemType.FOOD, 0.85f },
-			{ "imported box of chocolates", 10.00f, ItemType.IMPORTED_FOOD, 10.50f },
-			{ "imported bottle of perfume", 47.50f, ItemType.IMPORTED_OTHERS, 54.65f },
-			{ "imported bottle of perfume", 27.99f, ItemType.IMPORTED_OTHERS, 32.19f },
-			{ "bottle of perfume", 18.99f, ItemType.OTHERS, 20.89f },
-			{ "packet of pills", 9.75f, ItemType.MEDICAL, 9.75f },
-			{ "imported box of chocolates", 11.25f, ItemType.IMPORTED_FOOD, 11.85f } };
+	 public static Object[][] ITEM_LIST = new Object[][] { { "book", 12.49f, ItemType.BOOK,1,12.49f },
+			{ "Music CD", 14.99f, ItemType.OTHERS,1, 16.49f }, { "chocolate bar", 0.85f, ItemType.FOOD,1,0.85f },
+			{ "imported box of chocolates", 10.00f, ItemType.IMPORTED_FOOD,1, 10.50f },
+			{ "imported bottle of perfume", 47.50f, ItemType.IMPORTED_OTHERS,1, 54.65f },
+			{ "imported bottle of perfume", 27.99f, ItemType.IMPORTED_OTHERS,1, 32.19f },
+			{ "bottle of perfume", 18.99f, ItemType.OTHERS,1, 20.89f },
+			{ "packet of pills", 9.75f, ItemType.MEDICAL,2, 19.5f },
+			{ "imported box of chocolates", 11.25f, ItemType.IMPORTED_FOOD, 1, 11.85f } };
 
-	private static  Item createItem(String description, float price, ItemType itemType) {
+	private static  Item createItem(String description, float price, ItemType itemType,int quantity) {
 		Item item = testContextManager.getTestContext().getApplicationContext().getBean(Item.class);
 		item.setItemType(itemType);
 		item.setItemPrice(price);
 		item.setItemDescription(description);
+		item.setItemQuantity(quantity);
 		return item;
 	}
 	

@@ -9,6 +9,8 @@ public interface Item {
 	public float getItemPrice();
 	public void setItemPrice(float price);
 	public void setItemType(ItemType itemType);
+	public void setItemQuantity(int quantity);
+	public int getItemQuantity();
 
 	public boolean isItemImported();
 	public boolean isItemExempted();
