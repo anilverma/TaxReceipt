@@ -15,7 +15,7 @@ public class TaxReceiptApplication {
 		MUSIC_CD("Music CD"),
 		CHOCOLATE("Chocolate"),
 		PERFUME("Perfume"),
-		PILLS("Headache Pills");
+		PILLS("Pills");
 		private String itemName;
 		private ItemTypeList( String name){
 			itemName = name;
@@ -53,11 +53,12 @@ public class TaxReceiptApplication {
 			}
 			Item item = ctx.getBean(Item.class);
 			item.setItemDescription(list[product-1].getItemName());
-			System.out.println("Price");
+			System.out.println("Price:");
             item.setItemPrice(input.nextFloat());
             System.out.println(itemTypeList);
             item.setItemType(itemTypes[input.nextInt()]);
-            
+            System.out.println("Quantity:");
+            item.setItemQuantity(input.nextInt());
 			cart.addItemToCart(item);
 
 		}
