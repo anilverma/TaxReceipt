@@ -11,13 +11,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-public class CartImpl implements Cart {
+public class Checkout implements Cart {
 	private List<Item> itemList;
 	private float saleTax;
 	private float totalCost;
 	private static final Format FORMATTER = new DecimalFormat("0.00");
 
-	public CartImpl() {
+	public Checkout() {
 		itemList = new ArrayList<Item>();
 	}
 

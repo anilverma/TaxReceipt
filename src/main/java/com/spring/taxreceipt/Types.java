@@ -1,6 +1,6 @@
 package com.spring.taxreceipt;
 
-public class ItemDefinitions {
+public class Types {
 	public enum ItemType{
 		BOOK(true,false),
 		MEDICAL(true,false),

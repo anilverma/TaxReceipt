@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.spring.taxreceipt.ItemDefinitions.ItemType;
+import com.spring.taxreceipt.Types.ItemType;
 
 @SpringBootApplication
 public class TaxReceiptApplication {

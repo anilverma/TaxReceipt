@@ -11,7 +11,7 @@ import org.junit.runners.Parameterized;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestContextManager;
 
-import com.spring.taxreceipt.ItemDefinitions.ItemType;
+import com.spring.taxreceipt.Types.ItemType;
 
 @RunWith(Parameterized.class)
 @SpringBootTest(classes = TaxReceiptApplication.class)
