@@ -32,7 +32,6 @@ public class CartTest {
 	
 	@Before
 	public void setUpContext() throws Exception {
-		testContextManager = new TestContextManager(getClass());
 		testContextManager.prepareTestInstance(this);
 	}
 	
