@@ -1,11 +1,12 @@
-package com.spring.taxreceipt;
+package com.spring.taxreceipt.item;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import com.spring.taxreceipt.Types.ItemType;
+import com.spring.taxreceipt.item.Types.ItemType;
+import com.spring.taxreceipt.tax.TaxCalculator;
 
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)

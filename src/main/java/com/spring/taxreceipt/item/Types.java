@@ -1,4 +1,4 @@
-package com.spring.taxreceipt;
+package com.spring.taxreceipt.item;
 
 public class Types {
 	public enum ItemType{

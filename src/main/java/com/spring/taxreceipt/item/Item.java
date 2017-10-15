@@ -1,6 +1,6 @@
-package com.spring.taxreceipt;
+package com.spring.taxreceipt.item;
 
-import com.spring.taxreceipt.Types.ItemType;
+import com.spring.taxreceipt.item.Types.ItemType;
 
 public interface Item {
 	

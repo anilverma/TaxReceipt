@@ -1,4 +1,6 @@
-package com.spring.taxreceipt;
+package com.spring.taxreceipt.tax;
+
+import com.spring.taxreceipt.item.Item;
 
 public interface TaxCalculator {
 

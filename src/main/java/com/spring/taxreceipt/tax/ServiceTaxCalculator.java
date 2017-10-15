@@ -1,8 +1,9 @@
-package com.spring.taxreceipt;
+package com.spring.taxreceipt.tax;
 
 import org.springframework.stereotype.Component;
 
-import com.spring.taxreceipt.TaxDefinitions.TaxType;
+import com.spring.taxreceipt.item.Item;
+import com.spring.taxreceipt.tax.TaxDefinitions.TaxType;
 
 @Component
 public class ServiceTaxCalculator implements TaxCalculator{

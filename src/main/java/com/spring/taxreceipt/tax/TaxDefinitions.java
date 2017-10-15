@@ -1,4 +1,4 @@
-package com.spring.taxreceipt;
+package com.spring.taxreceipt.tax;
 
 public class TaxDefinitions {
 	public enum TaxType {

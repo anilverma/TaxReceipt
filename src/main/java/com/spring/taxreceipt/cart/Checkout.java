@@ -1,4 +1,4 @@
-package com.spring.taxreceipt;
+package com.spring.taxreceipt.cart;
 
 import java.text.DecimalFormat;
 import java.text.Format;
@@ -8,6 +8,8 @@ import java.util.List;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+import com.spring.taxreceipt.item.Item;
 
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
